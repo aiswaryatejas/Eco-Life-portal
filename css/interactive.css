@@ -1,0 +1,191 @@
+/* Nothing Design System — Interactive Elements */
+
+/* Star rating buttons */
+.star-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--border-visible);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all var(--duration-micro) var(--easing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* OUTER RING */
+.star-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--text-display);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.star-btn::after {
+  content: "";
+  position: absolute;
+  inset: 6px; /* controls ring thickness */
+  border-radius: 50%;
+  background-color: var(--black);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.star-btn:hover::before {
+  border-color: var(--text-display);
+}
+
+.star-btn.active::before {
+  border-color: #D71921;
+}
+
+.star-btn.active::after {
+  background-color: var(--text-disabled);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  accent-color: var(--text-display);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Task item styling */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item.completed .task-label {
+  color: var(--text-disabled);
+  text-decoration: line-through;
+}
+
+.task-label {
+  flex: 1;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color var(--duration-micro) var(--easing);
+}
+
+.task-item input[type="checkbox"] {
+  flex-shrink: 0;
+}
+
+/* Segmented control styling */
+.segmented {
+  display: inline-flex;
+  gap: 0;
+  border: 1px solid var(--border-visible);
+  border-radius: var(--radius-pill);
+  padding: 0;
+  background-color: transparent;
+}
+
+.segmented-item {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-left: 1px solid var(--border-visible);
+  transition: all var(--duration-micro) var(--easing);
+  white-space: nowrap;
+}
+
+.segmented-item:first-child {
+  border-left: none;
+}
+
+.segmented-item:hover {
+  color: var(--text-display);
+}
+
+.segmented-item.active {
+  background-color: var(--text-display);
+  color: var(--black);
+}
+
+/* Text-sm utility */
+.text-sm {
+  font-size: 14px;
+}
+
+/* Range input styling */
+input[type="range"] {
+  width: 100%;
+  height: 2px;
+  background: var(--border-visible);
+  border-radius: 1px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--text-display);
+  border: 1px solid var(--text-display);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--duration-micro) var(--easing);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--text-display);
+  border: 1px solid var(--text-display);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--duration-micro) var(--easing);
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+/* Justify center utility */
+.justify-center {
+  justify-content: center;
+}

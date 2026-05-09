@@ -1,0 +1,110 @@
+/* Main stylesheet — imports all modular CSS */
+
+@import url('./css/variables.css');
+@import url('./css/typography.css');
+@import url('./css/layout.css');
+@import url('./css/header.css');
+@import url('./css/cards.css');
+@import url('./css/forms.css');
+@import url('./css/hero.css');
+@import url('./css/footer.css');
+@import url('./css/data-viz.css');
+@import url('./css/interactive.css');
+@import url('./css/about.css');
+@import url('./css/responsive.css');
+
+/* Global overrides and utilities */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Utility classes */
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+.text-disabled {
+  color: var(--text-disabled);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-surface-raised {
+  background-color: var(--surface-raised);
+}
+
+.border-top {
+  border-top: 1px solid var(--border-visible);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-visible);
+}
+
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-25 { opacity: 0.25; }
+
+.no-wrap { white-space: nowrap; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.hidden { display: none !important; }
+
+/* Animations */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in var(--duration-transition) var(--easing) forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-lg));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up var(--duration-transition) var(--easing) forwards;
+}

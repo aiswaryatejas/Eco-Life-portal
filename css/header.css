@@ -1,0 +1,125 @@
+/* Nothing Design System — Header & Navigation */
+
+.header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border-visible);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: var(--space-md) 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--text-display);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: color var(--duration-micro) var(--easing);
+}
+
+.logo:hover {
+  color: var(--text-primary);
+}
+
+.logo-text {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: all var(--duration-micro) var(--easing);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-display);
+}
+
+.nav-link.active {
+  color: var(--text-display);
+  border-bottom-color: var(--text-display);
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 20px;
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  transition: color var(--duration-micro) var(--easing);
+}
+
+.mobile-menu-btn:hover {
+  color: var(--text-display);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--surface-raised);
+    border-bottom: 1px solid var(--border-visible);
+    padding: var(--space-md) 0;
+    z-index: 99;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: none;
+    border-left: 2px solid transparent;
+  }
+
+  .nav-link.active {
+    border-left-color: var(--text-display);
+    background-color: var(--surface);
+  }
+}

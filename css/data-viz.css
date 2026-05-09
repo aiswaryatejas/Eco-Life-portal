@@ -1,0 +1,208 @@
+/* Nothing Design System — Data Visualization */
+
+/* Progress bars */
+.progress-bar {
+  display: flex;
+  gap: var(--space-xs);
+  background-color: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  padding: var(--space-xs);
+}
+
+.progress-segment {
+  flex: 1;
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 1px;
+  transition: background-color var(--duration-standard) var(--easing);
+}
+
+.progress-segment.filled {
+  background-color: var(--text-display);
+}
+
+.progress-segment.success {
+  background-color: var(--success);
+}
+
+.progress-segment.warning {
+  background-color: var(--warning);
+}
+
+.progress-segment.error {
+  background-color: var(--error);
+}
+
+/* Stat rows */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-display);
+}
+
+.stat-value.success {
+  color: var(--success);
+}
+
+.stat-value.warning {
+  color: var(--warning);
+}
+
+.stat-value.error {
+  color: var(--error);
+}
+
+.stat-unit {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-left: var(--space-xs);
+}
+
+/* Data lists */
+.data-list {
+  list-style: none;
+}
+
+.data-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-list-item:last-child {
+  border-bottom: none;
+}
+
+.data-list-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.data-list-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-display);
+}
+
+/* Counter */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.counter-display {
+  text-align: center;
+  min-width: 80px;
+}
+
+.counter-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-display);
+}
+
+.counter-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+}
+
+.counter-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border-visible);
+  color: var(--text-primary);
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-micro) var(--easing);
+}
+
+.counter-btn:hover {
+  border-color: var(--text-display);
+  color: var(--text-display);
+}
+
+.counter-btn.primary {
+  background-color: var(--text-display);
+  color: var(--black);
+  border-color: var(--text-display);
+}
+
+.counter-btn.primary:hover {
+  background-color: var(--text-primary);
+}
+
+/* Visual tracker (dots/squares) */
+.visual-tracker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.tracker-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  background-color: var(--border);
+  border: 1px solid var(--border-visible);
+  transition: background-color var(--duration-micro) var(--easing);
+}
+
+.tracker-dot.active {
+  background-color: var(--text-display);
+  border-color: var(--text-display);
+}
+
+.tracker-dot.completed {
+  background-color: var(--success);
+  border-color: var(--success);
+}

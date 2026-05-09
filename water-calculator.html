@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Calculator — EcoLife Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">EcoLife</span>
+                </a>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                     <a href="about.html" class="nav-link">About</a>
+                    <a href="wellness.html" class="nav-link">Wellness</a>
+                    <a href="habit-tracker.html" class="nav-link">Tracker</a>
+                    <a href="water-calculator.html" class="nav-link active">Water</a>
+                    <a href="eco-tips.html" class="nav-link">Tips</a>
+                    <a href="daily-checklist.html" class="nav-link">Checklist</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">≡</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="label">Calculator</div>
+                    <h1>Water Usage</h1>
+                    <p>Track daily consumption and identify optimization opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-2 gap-2xl">
+                    <div class="card">
+                        <h2 class="mb-lg">Enter Usage</h2>
+
+                        <div class="input-field">
+                            <label class="input-label">Shower Time (minutes/day)</label>
+                            <input type="range" min="0" max="30" value="10" id="bathTime" class="input" style="padding: 0; border: none; height: 6px;" oninput="calculateWater()">
+                            <span class="input-hint"><span id="bathValue">10</span> min</span>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="input-label">Dishwashing (minutes/day)</label>
+                            <input type="range" min="0" max="40" value="15" id="dishTime" class="input" style="padding: 0; border: none; height: 6px;" oninput="calculateWater()">
+                            <span class="input-hint"><span id="dishValue">15</span> min</span>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="input-label">Laundry (loads/week)</label>
+                            <input type="range" min="0" max="10" value="3" id="laundryFreq" class="input" style="padding: 0; border: none; height: 6px;" oninput="calculateWater()">
+                            <span class="input-hint"><span id="laundryValue">3</span> loads</span>
+                        </div>
+
+                        <div class="input-field">
+                            <label class="input-label">Cooking Water (liters/day)</label>
+                            <input type="range" min="0" max="20" value="5" id="cookingWater" class="input" style="padding: 0; border: none; height: 6px;" oninput="calculateWater()">
+                            <span class="input-hint"><span id="cookingValue">5</span> L</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="mb-lg">Your Usage</h2>
+
+                        <div class="stat-row">
+                            <span class="stat-label">Shower</span>
+                            <span class="stat-value"><span id="bathUsage">100</span><span class="stat-unit">L/day</span></span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Dishes</span>
+                            <span class="stat-value"><span id="dishUsage">75</span><span class="stat-unit">L/day</span></span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Laundry</span>
+                            <span class="stat-value"><span id="laundryUsage">21</span><span class="stat-unit">L/day</span></span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Cooking</span>
+                            <span class="stat-value"><span id="cookingUsageDisplay">5</span><span class="stat-unit">L/day</span></span>
+                        </div>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: var(--space-lg); margin-top: var(--space-lg);">
+                            <div class="stat-row">
+                                <span class="label">Total</span>
+                                <span class="display-lg" id="totalUsage">201</span>
+                            </div>
+                            <p class="text-muted text-sm mt-md" id="usageMessage">Typical household uses 250–300L/day. You are below average.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-surface-raised mt-xl">
+                    <div class="label mb-lg">Strategies</div>
+                    <h3 class="mb-lg">Water Conservation Tips</h3>
+                    <div class="grid grid-auto gap-lg">
+                        <div>
+                            <h4 class="label mb-md">Shower</h4>
+                            <p class="text-muted text-sm">Reduce shower time to 5 minutes. Install low-flow showerheads (4L/min vs. 9.5L/min).</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Dishes</h4>
+                            <p class="text-muted text-sm">Run dishwasher only when full. Hand-wash efficiently with minimal running water.</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Laundry</h4>
+                            <p class="text-muted text-sm">Wash clothes only when needed. Use cold water and full loads (saves 40% water).</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Cooking</h4>
+                            <p class="text-muted text-sm">Reuse cooking water for plants. Use lids to reduce boiling time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-auto gap-2xl mb-xl">
+                <div>
+                    <div class="logo-text mb-lg">EcoLife Portal</div>
+                    <p class="text-muted">Connecting personal health with planetary responsibility through intentional habit tracking and data-driven insights.</p>
+                </div>
+                <div>
+                    <h3 class="mb-md">Navigation</h3>
+                    <ul class="stack-md" style="list-style: none;">
+                        <li><a href="wellness.html">Wellness</a></li>
+                        <li><a href="habit-tracker.html">Tracker</a></li>
+                        <li><a href="eco-tips.html">Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoLife Portal. Built with intention.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

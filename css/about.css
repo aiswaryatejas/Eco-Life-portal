@@ -1,0 +1,83 @@
+/* 1. The Container for the 3 horizontal cards */
+.creator-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Important for mobile responsiveness */
+    margin-top: 2.5rem;
+}
+
+/* 2. Styling the individual cards (re-using your base .card) */
+.creator-card {
+    flex: 1;
+    min-width: 280px; 
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.creator-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 3. The Image Box structure you requested */
+.creator-img-box {
+    width: 100%;
+    height: 250px; 
+    background-color: var(--bg-surface-raised);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+/* The span wrapper inside the box */
+.creator-img-box span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* The actual image inside the span */
+.creator-img-box span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the span without stretching */
+    display: block;
+}
+
+/* 4. Layout for the 2 Mission cards at the top */
+/* Update these in about.css */
+
+.mission-grid {
+    display: flex;
+    gap: 3rem; /* Increased from 2rem to give cards more space between them */
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.mission-grid .card {
+    flex: 1;
+    min-width: 300px;
+    padding: 3rem; /* Increased padding inside the card for better pacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically if cards have different heights */
+}
+.mission-grid .card h3 {
+    margin-bottom: 1rem; /* Space between title and description */
+    font-size: 1.5rem;
+}
+
+.mission-grid .card p {
+    line-height: 1.8; /* This is the "pacing" for the actual text */
+    letter-spacing: 0.02rem;
+    color: var(--text-muted);
+}
+.mission-grid .label {
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem; /* Gives the uppercase text a tech-eco feel */
+}

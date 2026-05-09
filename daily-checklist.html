@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Checklist — EcoLife Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">EcoLife</span>
+                </a>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                     <a href="about.html" class="nav-link ">About</a>
+                    <a href="wellness.html" class="nav-link">Wellness</a>
+                    <a href="habit-tracker.html" class="nav-link">Tracker</a>
+                    <a href="water-calculator.html" class="nav-link">Water</a>
+                    <a href="eco-tips.html" class="nav-link">Tips</a>
+                    <a href="daily-checklist.html" class="nav-link active">Checklist</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">≡</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="label">Daily</div>
+                    <h1>Checklist</h1>
+                    <p id="checklistDate"></p>
+                    <p class="text-muted mt-md">Complete daily habits for health and sustainability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-2 gap-2xl">
+                    <div class="card">
+                        <h2 class="mb-lg">Daily Tasks</h2>
+                        <div class="stack-lg" id="taskList" style="display: flex; flex-direction: column;"></div>
+                    </div>
+
+                    <div class="card bg-surface-raised">
+                        <div class="label mb-md">Progress</div>
+                        <h3 id="completionPercentage" class="display-lg">0%</h3>
+                        <p class="text-muted mt-lg text-sm">Of daily recommended habits completed</p>
+                        <div class="progress-bar mt-lg">
+                            <div class="progress-segment" id="segment1"></div>
+                            <div class="progress-segment" id="segment2"></div>
+                            <div class="progress-segment" id="segment3"></div>
+                            <div class="progress-segment" id="segment4"></div>
+                            <div class="progress-segment" id="segment5"></div>
+                            <div class="progress-segment" id="segment6"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-xl">
+                    <div class="label mb-lg">Reference</div>
+                    <h3 class="mb-lg">Why These Habits</h3>
+                    <div class="grid grid-auto gap-lg">
+                        <div>
+                            <h4 class="label mb-md">Hydration</h4>
+                            <p class="text-muted text-sm">Essential for cognitive function, energy, and physical health. Consistent intake prevents dehydration symptoms.</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Hygiene</h4>
+                            <p class="text-muted text-sm">Handwashing is the single most effective disease prevention measure. Reduces illness transmission by ~50%.</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Sustainability</h4>
+                            <p class="text-muted text-sm">Small daily choices compound into measurable environmental impact when maintained consistently.</p>
+                        </div>
+                        <div>
+                            <h4 class="label mb-md">Tracking</h4>
+                            <p class="text-muted text-sm">Visible progress reinforces behavior change. Daily review builds motivation and awareness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-auto gap-2xl mb-xl">
+                <div>
+                    <div class="logo-text mb-lg">EcoLife Portal</div>
+                    <p class="text-muted">Connecting personal health with planetary responsibility through intentional habit tracking and data-driven insights.</p>
+                </div>
+                <div>
+                    <h3 class="mb-md">Navigation</h3>
+                    <ul class="stack-md" style="list-style: none;">
+                        <li><a href="wellness.html">Wellness</a></li>
+                        <li><a href="habit-tracker.html">Tracker</a></li>
+                        <li><a href="eco-tips.html">Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoLife Portal. Built with intention.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

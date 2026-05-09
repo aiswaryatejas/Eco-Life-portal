@@ -1,0 +1,137 @@
+/* Nothing Design System — Responsive & Mobile */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .display-lg {
+    font-size: 36px;
+  }
+
+  .display-md {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  section {
+    padding: var(--space-2xl) 0;
+  }
+
+  section:first-child {
+    padding-top: var(--space-3xl);
+  }
+
+  .display-xl {
+    font-size: 48px;
+  }
+
+  .display-lg {
+    font-size: 32px;
+  }
+
+  .display-md {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+
+  .cols-2 {
+    column-count: 1;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .display-xl {
+    font-size: 36px;
+  }
+
+  .display-lg {
+    font-size: 28px;
+  }
+
+  .display-md {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .gap-lg {
+    gap: var(--space-md);
+  }
+
+  .stack-lg > * + * {
+    margin-top: var(--space-md);
+  }
+
+  .status-indicator {
+    padding: var(--space-2xs) var(--space-sm);
+    font-size: 10px;
+  }
+}
+
+/* Touch targets */
+@media (hover: none) {
+  .btn:hover {
+    background-color: inherit;
+  }
+
+  .card:hover {
+    border-color: var(--border-visible);
+  }
+}
