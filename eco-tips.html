@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Tips — EcoLife Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">EcoLife</span>
+                </a>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                     <a href="about.html" class="nav-link">About</a>
+                    <a href="wellness.html" class="nav-link">Wellness</a>
+                    <a href="habit-tracker.html" class="nav-link">Tracker</a>
+                    <a href="water-calculator.html" class="nav-link">Water</a>
+                    <a href="eco-tips.html" class="nav-link active">Tips</a>
+                    <a href="daily-checklist.html" class="nav-link">Checklist</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">≡</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="label">Guide</div>
+                    <h1>Sustainability Tips</h1>
+                    <p>Practical strategies for everyday environmental responsibility.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="flex flex-center gap-md mb-xl" style="flex-wrap: wrap;">
+                    <button class="segmented-item active" onclick="filterTips('All')">All</button>
+                    <button class="segmented-item" onclick="filterTips('Water')">Water</button>
+                    <button class="segmented-item" onclick="filterTips('Energy')">Energy</button>
+                    <button class="segmented-item" onclick="filterTips('Waste')">Waste</button>
+                </div>
+
+                <div class="card bg-surface-raised mb-xl">
+                    <div class="label mb-md" id="tipCategory">Water</div>
+                    <h2 id="tipText" class="mb-lg">Turn off the tap while brushing your teeth</h2>
+                    <p class="text-muted" id="tipImpact">Impact: Save 6 liters per minute</p>
+                    <a href="#" class="btn btn-primary btn-sm mt-lg" onclick="generateNewTip(); return false;">Next Tip</a>
+                </div>
+
+                <div class="grid grid-2 gap-lg mb-xl">
+                    <div class="card">
+                        <div class="label mb-md">Category</div>
+                        <h4>Water</h4>
+                        <p class="text-muted text-sm mt-sm" id="waterCount">6 practical tips focused on conservation</p>
+                    </div>
+                    <div class="card">
+                        <div class="label mb-md">Category</div>
+                        <h4>Energy</h4>
+                        <p class="text-muted text-sm mt-sm" id="energyCount">3 strategies for efficiency</p>
+                    </div>
+                    <div class="card">
+                        <div class="label mb-md">Category</div>
+                        <h4>Waste</h4>
+                        <p class="text-muted text-sm mt-sm" id="wasteCount">3 reduction approaches</p>
+                    </div>
+                    <div class="card">
+                        <div class="label mb-md">Focus</div>
+                        <h4>Everyday Impact</h4>
+                        <p class="text-muted text-sm mt-sm">Small consistent actions create measurable environmental benefit over time.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="mb-lg">Why These Matter</h3>
+                    <p class="text-muted">Each tip represents a concrete action you can implement immediately. When applied consistently across a household or community, these individual behaviors compound into significant environmental benefit. Track your implementation through the Habit Tracker and measure your impact.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-auto gap-2xl mb-xl">
+                <div>
+                    <div class="logo-text mb-lg">EcoLife Portal</div>
+                    <p class="text-muted">Connecting personal health with planetary responsibility through intentional habit tracking and data-driven insights.</p>
+                </div>
+                <div>
+                    <h3 class="mb-md">Navigation</h3>
+                    <ul class="stack-md" style="list-style: none;">
+                        <li><a href="wellness.html">Wellness</a></li>
+                        <li><a href="habit-tracker.html">Tracker</a></li>
+                        <li><a href="water-calculator.html">Water</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoLife Portal. Built with intention.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
