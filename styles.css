@@ -108,3 +108,43 @@ main {
 .slide-up {
   animation: slide-up var(--duration-transition) var(--easing) forwards;
 }
+
+/* Apply to the entire webpage */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Link your image here */
+    background-image: url('images/wmremove-transformed(1).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed; /* Keeps background still while you scroll */
+    
+    /* Updated Global Text Color for contrast */
+    color: #1a3a2a; 
+    font-family: 'Inter', sans-serif; /* Or your preferred font */
+}
+
+/* Updated Header/Nav for visibility */
+header, nav {
+    
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(26, 58, 42, 0.1);
+}
+
+/* Content Card styling to pop against the texture */
+.card, .section-box {
+    background: rgba(255, 255, 255, 0.4); /* Glassmorphism effect */
+    backdrop-filter: blur(8px);
+    border: 1px solid #2d5a43; /* Using your signature green for borders */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings color update */
+h1, h2, h3 {
+    color:white;
+}
+
+
